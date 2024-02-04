@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitstops Information</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url('pits.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .title-box {
+            background-color: #eb0f0f; 
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .heading {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #fff; 
+        }
+
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            border: 1px solid #d3d3d3; 
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            width: 400px; 
+            background-color: rgba(255, 255, 255, 1); 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card a {
+            color: #dc0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .submit-button {
+            margin-top: 10px;
+            background-color: #dc0000; 
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .submit-button:hover {
+            background-color: #a30000; 
+        }
+    </style>
+</head>
+<body>
+    <div class="title-box">
+        <h1 class="heading">PITSTOPS</h1>
+    </div>
+    <div class="cards-container">
+        <div class="card">
+            <a href="#">Pitstops Taken By Drivers Who Won Races at a Given Circuit</a>
+            <form action="P1.php" method="post">
+                <label for="circuitid"></label>
+                <select name="circuitid" id="circuitid">
+                    <option value="select">Select a circuit</option>
+                    <option value="29">Adelaide Street Circuit</option>
+                    <option value="64">Ain Diab</option>
+                    <option value="58">Aintree</option>
+                    <option value="1">Albert Park Grand Prix Circuit</option>
+                    <option value="27">Autódromo do Estoril</option>
+                    <option value="21">Autodromo Enzo e Dino Ferrari</option>
+                    <option value="32">Autódromo Hermanos Rodríguez</option>
+                    <option value="75">Autódromo Internacional do Algarve</option>
+                    <option value="36">Autódromo Internacional Nelson Piquet</option>
+                    <option value="76">Autodromo Internazionale del Mugello </option>
+                    <option value="18">Autódromo José Carlos Pace</option>
+                    <option value="25">Autódromo Juan y Oscar Gálvez</option>
+                    <option value="14">Autodromo Nazionale di Monza</option>
+                    <option value="61">AVUS</option>
+                    <option value="3">Bahrain International Circuit</option>
+                    <option value="73">Baku City Circuit</option>
+                    <option value="38">Brands Hatch</option>
+                    <option value="68">Buddh International Circuit</option>
+                    <option value="51">Charade Circuit</option>
+                    <option value="66">Circuit Bremgarten</option>
+                    <option value="4">Circuit de Barcelona-Catalunya</option>
+                    <option value="6">Circuit de Monaco</option>
+                    <option value="8">Circuit de Nevers Magny-Cours</option>
+                    <option value="67">Circuit de Pedralbes</option>
+                    <option value="13">Circuit de Spa-Francorchamps</option>
+                    <option value="7">Circuit Gilles Villeneuve</option>
+                    <option value="52">Circuit Mont-Tremblant</option>
+                    <option value="69">Circuit of the Americas</option>
+                    <option value="39">Circuit Park Zandvoort</option>
+                    <option value="34">Circuit Paul Ricard</option>
+                    <option value="59">Circuito da Boavista</option>
+                    <option value="26">Circuito de Jerez</option>
+                    <option value="37">Detroit Street Circuit</option>
+                    <option value="41">Dijon-Prenois</option>
+                    <option value="31">Donington Park</option>
+                    <option value="42">Fair Park</option>
+                    <option value="16">Fuji Speedway</option>
+                    <option value="10">Hockenheimring</option>
+                    <option value="11">Hungaroring</option>
+                    <option value="19">Indianapolis Motor Speedway</option>
+                    <option value="5">Istanbul Park</option>
+                    <option value="45">Jarama</option>
+                    <option value="77">Jeddah Corniche Circuit</option>
+                    <option value="35">Korean International Circuit</option>
+                    <option value="30">Kyalami</option>
+                    <option value="44">Las Vegas Street Circuit</option>
+                    <option value="54">Le Mans</option>
+                    <option value="43">Long Beach</option>
+                    <option value="78">Losail International Circuit</option>
+                    <option value="15">Marina Bay Street Circuit</option>
+                    <option value="79">Miami International Autodrome</option>
+                    <option value="62">Monsanto Park Circuit</option>
+                    <option value="49">Montjuïc</option>
+                    <option value="48">Mosport International Raceway</option>
+                    <option value="50">Nivelles-Baulers</option>
+                    <option value="20">Nürburgring</option>
+                    <option value="28">Okayama International Circuit</option>
+                    <option value="65">Pescara Circuit</option>
+                    <option value="33">Phoenix street circuit</option>
+                    <option value="56">Prince George Circuit</option>
+                    <option value="70">Red Bull Ring</option>
+                    <option value="55">Reims-Gueux</option>
+                    <option value="60">Riverside International Raceway</option>
+                    <option value="53">Rouen-Les-Essarts</option>
+                    <option value="47">Scandinavian Raceway</option>
+                    <option value="63">Sebring International Raceway</option>
+                    <option value="2">Sepang International Circuit</option>
+                    <option value="17">Shanghai International Circuit</option>
+                    <option value="9">Silverstone Circuit</option>
+                    <option value="71">Sochi Autodrom</option>
+                    <option value="22">Suzuka Circuit</option>
+                    <option value="12">Valencia Street Circuit</option>
+                    <option value="46">Watkins Glen</option>
+                    <option value="24">Yas Marina Circuit</option>
+                    <option value="57">Zeltweg</option>
+                    <option value="40">Zolder</option>
+                </select><br>
+                <input type="submit" name="descending" value = "SUBMIT" class="submit-button"/>
+            </form>
+        </div>
+
+
+    </div>
+</body>
+</html>

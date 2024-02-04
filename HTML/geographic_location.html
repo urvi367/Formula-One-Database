@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Information</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url('loc.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .title-box {
+            background-color: #eb0f0f; 
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .heading {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            border: 1px solid #d3d3d3; 
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            width: 400px; 
+            background-color: rgba(255, 255, 255, 1); 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card a {
+            color: #dc0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .submit-button {
+            margin-top: 10px;
+            background-color: #dc0000; 
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .submit-button:hover {
+            background-color: #a30000; 
+        }
+    </style>
+</head>
+<body>
+    <div class="title-box">
+        <h1 class="heading">LOCATION</h1>
+    </div>
+    <div class="cards-container">
+        <div class="card">
+            <a href="#">Analyzing How Location Affects Race Performance of Drivers</a>
+            <form action="G1.php" method="post">
+                <label for="circuitid"></label>
+                <select name="drivername" id="drivername">
+                        <option value="select">Select a Driver</option>
+                        <option value="Lewis Hamilton">Lewis Hamilton</option>
+                        <option value="Nick Heidfeld">Nick Heidfeld</option>
+                        <option value="Nico Rosberg">Nico Rosberg</option>
+                        <option value="Fernando Alonso">Fernando Alonso</option>
+                        <option value="Heikki Kovalainen">Heikki Kovalainen</option>
+                        <option value="Kazuki Nakajima">Kazuki Nakajima</option>
+                        <option value="Sebastien Bourdais">Sebastien Bourdais</option>
+                        <option value="Kimi Raikkonen">Kimi Raikkonen</option>
+                        <option value="Robert Kubica">Robert Kubica</option>
+                        <option value="Timo Glock">Timo Glock</option>
+                        <option value="Takuma Sato">Takuma Sato</option>
+                        <option value="Nelson Piquet Jr.">Nelson Piquet Jr.</option>
+                        <option value="Felipe Massa">Felipe Massa</option>
+                        <option value="David Coulthard">David Coulthard</option>
+                        <option value="Jarno Trulli">Jarno Trulli</option>
+                        <option value="Adrian Sutil">Adrian Sutil</option>
+                        <option value="Mark Webber">Mark Webber</option>
+                        <option value="Jenson Button">Jenson Button</option>
+                        <option value="Anthony Davidson">Anthony Davidson</option>
+                        <option value="Sebastian Vettel">Sebastian Vettel</option>
+                        <option value="Giancarlo Fisichella">Giancarlo Fisichella</option>
+                        <option value="Rubens Barrichello">Rubens Barrichello</option>
+                        <option value="Ralf Schumacher">Ralf Schumacher</option>
+                        <option value="Vitantonio Liuzzi">Vitantonio Liuzzi</option>
+                        <option value="Alexander Wurz">Alexander Wurz</option>
+                        <option value="Scott Speed">Scott Speed</option>
+                        <option value="Christijan Albers">Christijan Albers</option>
+                        <option value="Markus Winkelhock">Markus Winkelhock</option>
+                        <option value="Sakon Yamamoto">Sakon Yamamoto</option>
+                        <option value="Michael Schumacher">Michael Schumacher</option>
+                        <option value="Juan Pablo Montoya">Juan Pablo Montoya</option>
+                        <option value="Christian Klien">Christian Klien</option>
+                        <option value="Tiago Monteiro">Tiago Monteiro</option>
+                        <option value="Yuji Ide">Yuji Ide</option>
+                        <option value="Jacques Villeneuve">Jacques Villeneuve</option>
+                        <option value="Franck Montagny">Franck Montagny</option>
+                        <option value="Pedro de la Rosa">Pedro de la Rosa</option>
+                        <option value="Robert Doornbos">Robert Doornbos</option>
+                        <option value="Narain Karthikeyan">Narain Karthikeyan</option>
+                        <option value="Patrick Friesacher">Patrick Friesacher</option>
+                        <option value="Ricardo Zonta">Ricardo Zonta</option>
+                        <option value="Antonio Pizzonia">Antonio Pizzonia</option>
+                        <option value="Cristiano da Matta">Cristiano da Matta</option>
+                        <option value="Olivier Panis">Olivier Panis</option>
+                        <option value="Giorgio Pantano">Giorgio Pantano</option>
+                        <option value="Gianmaria Bruni">Gianmaria Bruni</option>
+                        <option value="Zsolt Baumgartner">Zsolt Baumgartner</option>
+                        <option value="Marc Gene">Marc Gene</option>
+                        <option value="Heinz-Harald Frentzen">Heinz-Harald Frentzen</option>
+                        <option value="Jos Verstappen">Jos Verstappen</option>
+                        <option value="Justin Wilson">Justin Wilson</option>
+                        <option value="Ralph Firman">Ralph Firman</option>
+                        <option value="Nicolas Kiesa">Nicolas Kiesa</option>
+                        <option value="Luciano Burti">Luciano Burti</option>
+                        <option value="Jean Alesi">Jean Alesi</option>
+                        <option value="Eddie Irvine">Eddie Irvine</option>
+                        <option value="Mika Hakkinen">Mika Hakkinen</option>
+                        <option value="Tarso Marques">Tarso Marques</option>
+                        <option value="Enrique Bernoldi">Enrique Bernoldi</option>
+                        <option value="Gaston Mazzacane">Gaston Mazzacane</option>
+                        <option value="Tomas Enge">Tomas Enge</option>
+                        <option value="Alex Yoong">Alex Yoong</option>
+                        <option value="Mika Salo">Mika Salo</option>
+                        <option value="Pedro Diniz">Pedro Diniz</option>
+                        <option value="Johnny Herbert">Johnny Herbert</option>
+                        <option value="Allan McNish">Allan McNish</option>
+                        <option value="Sebastien Buemi">Sebastien Buemi</option>
+                        <option value="Toranosuke Takagi">Toranosuke Takagi</option>
+                        <option value="Luca Badoer">Luca Badoer</option>
+                        <option value="Alessandro Zanardi">Alessandro Zanardi</option>
+                        <option value="Damon Hill">Damon Hill</option>
+                        <option value="Stephane Sarrazin">Stephane Sarrazin</option>
+                        <option value="Ricardo Rosset">Ricardo Rosset</option>
+                        <option value="Esteban Tuero">Esteban Tuero</option>
+                        <option value="Shinji Nakano">Shinji Nakano</option>
+                        <option value="Jan Magnussen">Jan Magnussen</option>
+                        <option value="Gerhard Berger">Gerhard Berger</option>
+                        <option value="Nicola Larini">Nicola Larini</option>
+                        <option value="Ukyo Katayama">Ukyo Katayama</option>
+                        <option value="Vincenzo Sospiri">Vincenzo Sospiri</option>                                           
+                </select><br>
+                <input type="submit" name="descending" value = "SUBMIT" class="submit-button"/>            </form>
+            <!--<button class="submit-button">SUBMIT</button>-->
+        </div>
+    </div>
+</body>
+</html>

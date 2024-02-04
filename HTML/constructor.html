@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitstops Information</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url('const.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .title-box {
+            background-color: #eb0f0f; 
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .heading {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #fff; 
+        }
+
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            border: 1px solid #d3d3d3; 
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            width: 400px; 
+            background-color: rgba(255, 255, 255, 1); 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card a {
+            color: #dc0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .submit-button {
+            margin-top: 10px;
+            background-color: #dc0000; 
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .submit-button:hover {
+            background-color: #a30000; 
+        }
+    </style>
+</head>
+<body>
+    <div class="title-box">
+        <h1 class="heading">CONSTRUCTOR</h1>
+    </div>
+    <div class="cards-container">
+        <div class="card">
+            <a href="#">Constructor Performance in the Past 5 Years</a>
+            <form action="CO2.php" method="post">
+                <input type="submit" name="descending" value = "SUBMIT" class="submit-button"/>
+            </form>
+            <!--<button class="submit-button">SUBMIT</button>-->
+        </div>
+
+        <div class="card">
+            <a href="#">First Position Analysis of Contructors</a>
+            <form action="CO1.php" method="post">
+                <input type="submit" name="descending" value = "SUBMIT" class="submit-button"/>
+            </form>
+        </div>
+        <!-- Add more cards with questions as needed -->
+    </div>
+</body>
+</html>

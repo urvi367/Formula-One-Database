@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 Categories</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 10px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('f1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(2px);
+            z-index: -1;
+        }
+
+        .f1-intro {
+            text-align: center;
+            padding: 20px;
+            color: #000;
+            background: rgba(221, 221, 221, 0.9);
+            z-index: 2;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            min-height: 100vh; 
+            z-index: 1;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            overflow: auto; 
+        }
+
+        .card {
+            border: 1px solid #d3d3d3;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            width: 200px; 
+            height: 150px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: transform 0.3s ease-in-out;
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card a {
+            color: #dc0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="f1-intro" style="text-align: justify;">
+        <h2 style="text-align: center; color: #dc0000; font-weight: bold;">Welcome to the World of Formula 1 Racing</h2>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+        <p style="font-family: 'Open Sans', sans-serif;">Formula 1 (F1) racing is a premier class of open-wheel car racing that showcases the pinnacle of motor racing technology and talent. 
+            In F1, teams compete with cutting-edge, high-performance cars, and the sport is renowned for its global appeal and high-speed drama. 
+            The basic rules of F1 racing involve a series of Grand Prix events held on diverse tracks around the world. 
+            Each race consists of multiple laps, and the driver and team that accumulate the most points throughout the season are crowned champions. 
+            F1 cars adhere to strict regulations regarding dimensions, weight, and technology, fostering a competitive yet standardized environment. 
+            The challenges in F1 are multifaceted, ranging from mastering aerodynamics and tire strategies to navigating dynamic weather conditions 
+            and pushing the limits of mechanical engineering. Drivers must possess exceptional skill, agility, and strategic acumen to maneuver through crowded circuits 
+            and make split-second decisions, making F1 a thrilling and demanding spectacle that captivates motorsport enthusiasts globally. <br> <br>
+            Discover the excitement of F1, where the world's best drivers compete in the most advanced cars on challenging circuits around the globe. Click below to learn about the drivers, constructors, races, accidents, locations of F1 races, and more.</p>
+    </div>
+
+    <div class="container">
+        <div class="cards-container">
+            <div class="card">
+                <a href="driver.html">Driver</a>
+            </div>
+
+            <div class="card">
+                <a href="circuit.html">Circuit</a>
+            </div>
+
+            <div class="card">
+                <a href="races.html">Races</a>
+            </div>
+
+            <div class="card">
+                <a href="accidents.html">Accidents & Unfinished Status</a>
+            </div>
+
+            <div class="card">
+                <a href="pitstops.html">Pitstops</a>
+            </div>
+
+            <div class="card">
+                <a href="geographic_location.html">Geographic Location</a>
+            </div>
+
+            <div class="card">
+                <a href="constructor.html">Constructor</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="f1-intro" style="text-align: right;">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+        <p style="font-family: 'Open Sans', sans-serif;">By Mansi Goel and Urvi Rawat</p>
+    </div>
+</body>
+
+</html>
